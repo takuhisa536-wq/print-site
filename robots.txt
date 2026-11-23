@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://takuhisa536-wq.github.io/print-site/sitemap.xml
