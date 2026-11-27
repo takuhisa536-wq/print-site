@@ -931,6 +931,21 @@ body.pp-off .card .pdf-preview{display:none!important}
 .pg-note p{font-size:14px;line-height:1.75;margin:0}
 .pg-note ul{margin:6px 0 0;padding-left:20px}
 .pg-note li{font-size:14px;line-height:1.75;margin:3px 0}
+
+/* ===== スマホだけ：追尾するものを減らして画面を広くする（2026-11-27） ===== */
+/* 「トップ」ボタンは本来400pxスクロール後にだけ出る設計（JSで.showを付ける）なのに、
+   元のCSSが最初から表示（opacity:1）になっていたので、ここで本来の動きに戻す */
+.back-to-top{opacity:0;visibility:hidden;transition:opacity .2s ease,background .2s ease,transform .15s ease}
+.back-to-top.show{opacity:1;visibility:visible}
+@media(max-width:700px){
+.topbar{position:static} /* ヘッダーはスクロールで流れる。PCは今まで通り追尾 */
+.back-to-top{width:44px;height:44px;right:12px;bottom:12px;bottom:calc(12px + env(safe-area-inset-bottom))}
+.back-to-top .label{display:none} /* 「トップ」の文字を消してアイコンだけに */
+.back-to-top svg{width:18px;height:18px}
+.memo-float .memo-open-btn{bottom:calc(72px + env(safe-area-inset-bottom));min-height:44px;padding:8px 14px;font-size:14px}
+.memo-float .memo-open-btn .memo-open-sub{display:none} /* 「計算メモ・小さめ」の文字を消して細くする */
+.memo-float .memo-panel{bottom:calc(72px + env(safe-area-inset-bottom))}
+}
 </style>
 <script>/* ダークモードの初期値はオフ（明るい表示）。スイッチでオンにしたときだけ切り替わります。 */document.documentElement.setAttribute('data-theme','light');</script>
 </head>
