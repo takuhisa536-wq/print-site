@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ランダム問題10問｜学年・教科・単元を選んで挑戦｜中学生プリント</title>
+<meta name="description" content="中1・中2・中3の数学・英語・理科・国語・社会から、学年・教科・単元を選んで10問をランダム出題する無料ページです。自分の学年の範囲だけが出るので、中1に中3の問題は出ません。問題と選択肢の順番は毎回シャッフル、答え・解説・ヒントつきの3択クイズ形式です。">
+<link rel="canonical" href="https://takuhisa536-wq.github.io/print-site/assets/random.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ランダム問題10問｜学年・教科・単元を選んで挑戦｜中学生プリント">
+<meta property="og:description" content="学年・教科・単元を選ぶと、その範囲から10問をランダムで出題します。答え・解説・ヒントつきの3択クイズ形式で、毎回ちがう問題に挑戦できます。">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"中学生プリント（トップ）","item":"https://takuhisa536-wq.github.io/print-site/"},{"@type":"ListItem","position":2,"name":"ランダム問題","item":"https://takuhisa536-wq.github.io/print-site/assets/random.html"}]},{"@type":"WebPage","name":"ランダム問題10問｜学年・教科・単元を選んで挑戦｜中学生プリント","description":"中1・中2・中3の数学・英語・理科・国語・社会から、学年・教科・単元を選んで10問をランダム出題する無料ページです。問題と選択肢の順番は毎回シャッフル、答え・解説・ヒントつきの3択クイズ形式です。","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"中学生プリント","url":"https://takuhisa536-wq.github.io/print-site/"},"audience":{"@type":"EducationalAudience","educationalRole":"student"}}]}</script>
+<style>
+:root{--ink:#1a2a2e;--muted:#5b6b6e;--line:#dde6ea;--navy:#0f3b4d;--teal:#0e7c6b;--orange:#ff6b35;--soft:#f2f7f5;--soft2:#fff6ec;--ok:#0e7c6b;--ng:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;color:var(--ink);background:#fff;line-height:1.7}
+.wrap{max-width:760px;margin:0 auto;padding:16px}
+a{color:var(--teal)}
+.topbar{border-bottom:2px solid var(--line);padding:10px 16px;font-weight:800}
+.topbar a{color:var(--navy);text-decoration:none}
+.crumbs{font-size:13px;color:var(--muted);margin:14px 0 6px}
+h1{font-size:24px;color:var(--navy);margin:6px 0 8px;line-height:1.4}
+.lead{font-size:15px;color:var(--ink);margin:0 0 8px}
+.panel{border:1px solid var(--line);border-radius:14px;padding:18px 16px;margin:16px 0;background:#fff}
+.field{margin:0 0 14px}
+.field label{display:block;font-weight:800;color:var(--navy);font-size:14px;margin:0 0 6px}
+.field select{width:100%;font-size:16px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.count{font-size:13px;color:var(--muted);margin:2px 0 14px}
+.btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;background:var(--navy);color:#fff;font-family:inherit}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.sub{background:#fff;color:var(--teal);border:2px solid var(--teal)}
+.btn.small{padding:6px 12px;font-size:13px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.pill{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:1px 10px;font-size:12px;font-weight:700;margin:0 4px 6px 0}
+.pill.orange{background:var(--soft2);border-color:#f3d9b8}
+.qcard{border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px;background:#fff;scroll-margin-top:10px}
+.qhead{display:flex;align-items:center;gap:8px;margin:0 0 4px}
+.qnum{font-weight:900;color:var(--navy);font-size:16px}
+.badge{font-size:12px;font-weight:800;border-radius:999px;padding:1px 10px}
+.badge.ok{background:#e3f2ee;color:var(--ok);border:1px solid var(--ok)}
+.badge.ng{background:#fdecea;color:var(--ng);border:1px solid var(--ng)}
+.qtext{font-size:16px;margin:6px 0 12px;white-space:pre-line}
+.choices{display:grid;gap:8px}
+.choice{text-align:left;font-family:inherit;font-size:15px;padding:11px 14px;border:2px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;color:var(--ink)}
+.choice .lab{font-weight:900;color:var(--teal);margin-right:8px}
+.choice.sel{border-color:var(--teal);background:var(--soft)}
+.choice.right{border-color:var(--ok);background:#e3f2ee}
+.choice.wrong{border-color:var(--ng);background:#fdecea}
+.choice:disabled{cursor:default;opacity:.92}
+.hintbtn{margin-top:12px;background:none;border:0;color:var(--teal);font-weight:800;font-size:14px;cursor:pointer;padding:4px 0;font-family:inherit}
+.hintbox{background:var(--soft2);border-radius:10px;padding:10px 12px;font-size:14px;margin-top:8px;white-space:pre-line}
+.expbox{border-top:1px dashed var(--line);margin-top:12px;padding-top:10px;font-size:14px}
+.expbox .ansline{font-weight:800;margin:0 0 6px}
+.expbox .exp{white-space:pre-line;background:var(--soft);border-radius:10px;padding:10px 12px}
+.result{border:2px solid var(--teal);border-radius:14px;padding:16px;background:var(--soft);text-align:center;margin:18px 0}
+.result .score{font-size:28px;font-weight:900;color:var(--navy)}
+.note{font-size:13px;color:var(--muted)}
+footer{border-top:2px solid var(--line);margin-top:32px;padding:14px 16px;font-size:13px;color:var(--muted);text-align:center}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="topbar"><a href="../index.html">中学生プリント｜トップ</a></div>
+<main class="wrap">
+<nav class="crumbs"><a href="../index.html">トップ</a> › ランダム問題</nav>
+<h1>ランダム問題｜学年・教科・単元を選んで10問</h1>
+<p class="lead">学年・教科・単元を選んで始めると、その範囲から10問をランダムで出します。選んだ学年以外の学年の問題は出ません。問題の順番と選択肢の並びは、毎回シャッフルされます。</p>
+
+<section id="setupView">
+  <div class="panel">
+    <div class="field">
+      <label for="selGrade">学年</label>
+      <select id="selGrade">
+        <option value="all">全学年</option>
+        <option value="1">中学1年</option>
+        <option value="2">中学2年</option>
+        <option value="3">中学3年</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="selSubject">教科</label>
+      <select id="selSubject">
+        <option value="all">全教科</option>
+        <option value="数学">数学</option>
+        <option value="英語">英語</option>
+        <option value="理科">理科</option>
+        <option value="国語">国語</option>
+        <option value="社会">社会</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="selUnit">単元</label>
+      <select id="selUnit"><option value="all">すべての単元</option></select>
+    </div>
+    <p class="count" id="poolCount">問題を読み込んでいます…</p>
+    <button type="button" class="btn" id="startBtn" disabled>10問ランダムで始める</button>
+    <p class="note" id="loadError" hidden>問題を読み込めませんでした。通信状態を確認して、ページを開き直してください。<a href="../index.html">トップに戻る</a></p>
+  </div>
+  <p class="note">出題範囲は、通常プリント（1）〜（4）と単元確認テストの問題です。反復ドリルと英検の問題は含まれません。</p>
+</section>
+
+<section id="quizView" hidden>
+  <p id="quizMeta"></p>
+  <div id="quizList"></div>
+  <div class="actions">
+    <button type="button" class="btn" id="gradeBtn">答え合わせをする</button>
+  </div>
+  <div class="result" id="resultBox" hidden>
+    <div class="score" id="scoreText"></div>
+    <p id="scoreMsg" style="margin:6px 0 0"></p>
+  </div>
+  <div class="actions" id="afterActions" hidden>
+    <button type="button" class="btn" id="retryBtn">もう一度ランダムで出題</button>
+    <button type="button" class="btn sub" id="changeBtn">条件を変える</button>
+  </div>
+</section>
+</main>
+<footer><a href="../index.html">中学生プリント トップ</a>　／　<a href="../index.html#prints">単元一覧</a>　／　<a href="../index.html#contact">お問い合わせ</a></footer>
+<script>
+function parseAnswers(str,count){
+var parts=String(str).split(/　(?=\d+\)\s*)/);
+var out=[];
+for(var i=0;i<parts.length;i++){ out.push(parts[i].replace(/^\d+\)\s*/,'').replace(/^\s+|\s+$/g,'')); }
+if(count&&out.length>count) out=out.slice(0,count);
+while(count&&out.length<count) out.push('');
+return out;
+}
+function makeRng(seed){
+var s=seed>>>0;
+return function(){ s=s+0x6D2B79F5|0; var t=Math.imul(s^s>>>15,1|s); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; };
+}
+function shuffledArr(arr,rnd){
+var a=arr.slice();
+for(var i=a.length-1;i>0;i--){ var j=Math.floor(rnd()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
+return a;
+}
+function subjectPool(subject){
+if(!SUBJECT_POOL){
+SUBJECT_POOL={};
+var all=PRINTS.concat(TESTS);
+for(var i=0;i<all.length;i++){
+var it=all[i];
+var ans=parseAnswers(it.answers,it.questions.length);
+if(!SUBJECT_POOL[it.subject]) SUBJECT_POOL[it.subject]=[];
+for(var j=0;j<ans.length;j++){ if(ans[j]) SUBJECT_POOL[it.subject].push(ans[j]); }
+}
+}
+return SUBJECT_POOL[subject]||[];
+}
+function numericVariants(c){
+var m=String(c).match(/^([+-]?\d+(?:\.\d+)?)([^\d]*)$/);
+if(!m) return [];
+var suffix=m[2];
+if(suffix.length>5) return [];
+if(/[A-Za-z]/.test(suffix)){ var st=suffix.replace(/\s/g,''); if(st!=='cm'&&st!=='km'&&st!=='m'&&st.indexOf('cm')!==0) return []; }
+var num=parseFloat(m[1]);
+if(!isFinite(num)) return [];
+var dec=(m[1].split('.')[1]||'').length;
+var plus=m[1].charAt(0)==='+';
+function fmt(v){ var s=dec>0? v.toFixed(dec) : String(Math.round(v)); if(plus&&v>0) s='+'+s; return s+suffix; }
+var out=[];
+var deltas=[1,-1,2,-2,10,-10,3,-3];
+for(var i=0;i<deltas.length;i++){ var sv=fmt(num+deltas[i]); if(sv!==String(c)&&out.indexOf(sv)<0) out.push(sv); }
+if(num!==0){ var s2=fmt(-num); if(s2!==String(c)&&out.indexOf(s2)<0) out.push(s2); }
+return out;
+}
+function shapeOf(v){
+var t=String(v);
+if(/^[+-]?\d+(\.\d+)?$/.test(t)) return 'num';
+var m=t.match(/^[+-]?\d+(\.\d+)?([^\d]*)$/);
+if(m&&m[2]) return 'numu:'+m[2].replace(/\s/g,'');
+return 'text';
+}
+function buildChoices(item,answers,qi,rnd){
+var correct=answers[qi];
+var distract=[];
+function tryAdd(v){
+if(v==null) return;
+v=String(v).replace(/^\s+|\s+$/g,'');
+if(!v||v===correct) return;
+if(distract.indexOf(v)>=0) return;
+distract.push(v);
+}
+var cShape=shapeOf(correct);
+var cNum=cShape.indexOf('num')===0;
+var others=[];
+for(var i=0;i<answers.length;i++){ if(i!==qi) others.push(answers[i]); }
+others=shuffledArr(others,rnd);
+for(var j=0;j<others.length&&distract.length<2;j++){ var o1=others[j]; if(shapeOf(o1)!==cShape) continue; if(cShape==='text'&&o1.length>Math.max(12,correct.length*3)) continue; tryAdd(o1); }
+for(var k=0;k<others.length&&distract.length<2;k++){
+var o2=others[k];
+if((shapeOf(o2).indexOf('num')===0)!==cNum) continue;
+if(cShape==='text'&&o2.length>Math.max(30,correct.length*5)) continue;
+tryAdd(o2);
+}
+for(var h=0;h<others.length&&distract.length<2;h++){ tryAdd(others[h]); }
+if(distract.length<2){
+var nv=shuffledArr(numericVariants(correct),rnd);
+for(var a=0;a<nv.length&&distract.length<2;a++){ tryAdd(nv[a]); }
+}
+if(distract.length<2){
+var pool=subjectPool(item.subject);
+var tries=0;
+while(distract.length<2&&tries<160){ tries++; var cand=pool[Math.floor(rnd()*pool.length)]; if(cand&&shapeOf(cand)===cShape) tryAdd(cand); }
+var maxLen=Math.max(60,correct.length*2);
+var t2=0;
+while(distract.length<2&&t2<160){ t2++; var cand2=pool[Math.floor(rnd()*pool.length)]; if(cand2&&cand2.length<=maxLen&&(shapeOf(cand2).indexOf('num')===0)===cNum) tryAdd(cand2); }
+var t3=0;
+while(distract.length<2&&t3<300){ t3++; tryAdd(pool[Math.floor(rnd()*pool.length)]); }
+}
+var choices=shuffledArr([correct].concat(distract),rnd);
+return {choices:choices,correctIndex:choices.indexOf(correct)};
+}
+function makeHint(item,qi,answer){
+var q=item.questions[qi];
+var unit=item.unit||'';
+var subj=item.subject;
+var hint='';
+if(subj==='数学'){
+if(q.indexOf('絶対値')>=0) hint='絶対値は、数直線で0からの距離のことです。符号を外した大きさで考えてみよう。';
+else if(q.indexOf('乗')>=0||q.indexOf('累乗')>=0) hint='同じ数を何回かけ算するかを確認しよう。マイナスの数をかける回数が偶数回か奇数回かで、答えの符号が変わります。';
+else if(unit.indexOf('因数分解')>=0||q.indexOf('因数分解')>=0) hint='まず共通因数でくくれないか確認しよう。次に、足すと真ん中の係数、かけると最後の数になる2つの数の組み合わせを探そう。';
+else if(unit.indexOf('展開')>=0) hint='分配法則で、かっこの中の1つ1つにかけ算してから足し合わせよう。符号の変化に注意して。';
+else if(q.indexOf('方程式')>=0||unit.indexOf('方程式')>=0) hint='xの項を左辺に、数字だけの項を右辺に集めよう。移項すると符号が反対になります。最後にxの係数で両辺をわろう。';
+else if(unit.indexOf('平方根')>=0||q.indexOf('平方根')>=0||q.indexOf('√')>=0) hint='2乗するとその数になる数が平方根です。√の中の数を、できるだけ小さい数に直せないか考えよう。';
+else if(unit.indexOf('関数')>=0||unit.indexOf('比例')>=0||q.indexOf('比例')>=0||q.indexOf('反比例')>=0) hint='表や式にxの値を当てはめて、xが増えたときyがどう変わるか確かめよう。グラフでは傾きと切片がポイントです。';
+else if(unit.indexOf('確率')>=0||q.indexOf('確率')>=0) hint='「全部の場合の数」と「そのことが起こる場合の数」を、もれなく数え上げよう。樹形図を書くと整理しやすくなります。';
+else if(unit.indexOf('図形')>=0||q.indexOf('面積')>=0||q.indexOf('体積')>=0||q.indexOf('角度')>=0) hint='使う公式をまず書き出そう。図に分かっている長さや角度を書き込むと、どの公式を使うか見えてきます。';
+else if(q.indexOf('計算しなさい')>=0) hint='計算の順番は「かっこ→かけ算・わり算→足し算・引き算」です。符号が同じか違うかで、答えの符号の決め方が変わることにも注意しよう。';
+else hint='問題文の数字を抜き出して、まず式を立ててみよう。何を求めるのかと、答えの単位を確認するのがポイントです。';
+}else if(subj==='英語'){
+if(q.indexOf('否定文')>=0) hint='否定文は、be動詞や助動詞のすぐ後ろに not を置いて作ります。一般動詞の文では do を使う形を思い出そう。';
+else if(q.indexOf('疑問文')>=0) hint='疑問文は、be動詞や助動詞を文の頭に出して作ります。一般動詞の文では文頭に置く言葉が変わることと、文の終わりの記号に注意しよう。';
+else if(q.indexOf('___')>=0||q.indexOf('am / is / are')>=0||q.indexOf('空所')>=0||q.indexOf('適する')>=0) hint='まず主語をチェックしよう。主語が誰（何）で、単数か複数か、時制はどうかで、空所に入る言葉が決まります。';
+else if(q.indexOf('書きかえ')>=0||q.indexOf('並べかえ')>=0||q.indexOf('並びかえ')>=0) hint='文の骨組み（主語→動詞→その後）の順番と時制を確認しながら組み立てよう。疑問詞や助動詞があるときは文の頭に来ます。';
+else if(q.indexOf('日本語に')>=0||q.indexOf('意味')>=0) hint='知っている単語を手がかりに、文全体の大まかな意味をつかもう。代名詞が何を指しているかも確認して。';
+else if(q.indexOf('過去形')>=0||unit.indexOf('過去')>=0) hint='過去の文かどうかは、動詞の形と、過去を表す言葉（yesterday など）が手がかりです。不規則に変化する動詞も思い出そう。';
+else hint='まず主語と動詞を見つけよう。時制（現在・過去・未来）と、文が肯定・否定・疑問のどれかを確認すると、動詞の形が決まります。';
+}else if(subj==='理科'){
+if(q.indexOf('密度')>=0||q.indexOf('何A')>=0||q.indexOf('何V')>=0||q.indexOf('計算')>=0) hint='使う公式をまず書き出して、単位をそろえてから数字を当てはめよう。答えにも単位をつけるのを忘れずに。';
+else if(q.indexOf('実験')>=0||q.indexOf('観察')>=0) hint='その実験では「何を変えて」「何を比べたか」を整理しよう。結果に違いが出たところが、答えの手がかりになります。';
+else if(unit.indexOf('天気')>=0||q.indexOf('前線')>=0||q.indexOf('気圧')>=0) hint='気団と前線の動き、気温と湿度の変化をセットで思い出そう。天気図の記号と矢印の向きもヒントになります。';
+else if(unit.indexOf('遺伝')>=0||q.indexOf('遺伝')>=0) hint='親の遺伝子の組み合わせを表（マス目）に書いてみよう。表の割合が、そのまま答えにつながります。';
+else if(unit.indexOf('天体')>=0||q.indexOf('月')>=0||q.indexOf('太陽')>=0) hint='地球・月・太陽の位置関係を簡単な図に描いてみよう。どの方向から見たかがポイントです。';
+else if(unit.indexOf('イオン')>=0||q.indexOf('イオン')>=0||q.indexOf('中和')>=0) hint='陽イオンと陰イオン、酸とアルカリのはたらきを分けて思い出そう。水溶液中で何が起きているかがポイントです。';
+else hint='用語の意味を正確に思い出そう。似た用語との違い（比べたポイント）が手がかりになります。';
+}else if(subj==='国語'){
+if(q.indexOf('読み')>=0||q.indexOf('漢字')>=0) hint='へんやつくりの意味と、音読み・訓読みのどちらで読むかを考えよう。熟語の組み立て方もヒントになります。';
+else if(q.indexOf('品詞')>=0||q.indexOf('活用')>=0||unit.indexOf('文法')>=0||unit.indexOf('品詞')>=0||unit.indexOf('用言')>=0) hint='その言葉が文の中でどんな働きをしているか（主語になるか、述語になるか、何かを修飾するか）を確認しよう。活用するかどうかも分かれ目です。';
+else if(q.indexOf('敬語')>=0||unit.indexOf('敬語')>=0) hint='誰の動作を、誰に対して高めているかを整理しよう。相手を高める言葉か、自分を低くする言葉か、丁寧に述べる言葉かで種類が決まります。';
+else if(unit.indexOf('古文')>=0||q.indexOf('古文')>=0||q.indexOf('現代語')>=0) hint='現代語と意味の違う古語に注意しよう。古文は主語が省略されがちなので、誰の動作かを補って読むのがコツです。';
+else if(unit.indexOf('読解')>=0||q.indexOf('本文')>=0||q.indexOf('なぜ')>=0||q.indexOf('どうして')>=0) hint='答えの手がかりは本文の中にあります。質問に出てくる言葉の前後の文を読み直して、理由や気持ちを表す部分を探そう。';
+else hint='まず文を音読して、主語と述語を確認しよう。分からない言葉は、前後の文から意味を予想してみて。';
+}else{
+if((q.indexOf('年')>=0&&q.indexOf('答えなさい')>=0)||q.indexOf('何年')>=0||q.indexOf('いつ')>=0) hint='その出来事を時代の流れの中に置いて思い出そう。前後の大きな出来事とセットで覚えた年号が手がかりになります。';
+else if(q.indexOf('誰')>=0||q.indexOf('人物')>=0||q.indexOf('何氏')>=0) hint='その人物や一族が「何をしたか」と「どの時代に活躍したか」をセットで思い出そう。';
+else if(unit.indexOf('憲法')>=0||unit.indexOf('政治')>=0||unit.indexOf('選挙')>=0) hint='そのしくみが「誰のために」「何を守るために」あるのかを考えると、言葉を思い出しやすくなります。';
+else if(unit.indexOf('経済')>=0||unit.indexOf('金融')>=0) hint='お金や商品が「誰から誰へ」どう流れるかをイメージしよう。買いたい量と売りたい量の関係もポイントです。';
+else if(unit.indexOf('地域')>=0||unit.indexOf('地形')>=0||unit.indexOf('産業')>=0) hint='その地域の気候と地形が、産業や人々のくらしにどう結びついているかを考えよう。';
+else if(q.indexOf('何といいますか')>=0||q.indexOf('何ですか')>=0||q.indexOf('答えなさい')>=0) hint='その言葉が使われる場面や、意味を説明する文を思い出そう。似た言葉との違いも手がかりになります。';
+else hint='その出来事や言葉を時代の流れとセットで思い出そう。「いつ・どこで・誰が・何をしたか」を整理すると見えてきます。';
+}
+if(answer&&hint.indexOf(answer)>=0){
+hint='この単元「'+unit+'」のポイントを思い出そう。プリント（1）の要点や、教科書のまとめの考え方が手がかりになります。';
+if(hint.indexOf(answer)>=0) hint='教科書のこの単元のまとめを思い出そう。キーワードとその意味をセットで考えるのがポイントです。';
+}
+return hint;
+}
+/* ===== 問題データはトップページ（index.html）の中の PRINTS / TESTS を読み込んで使います。
+   問題文・答え・解説はトップと同じものなので、内容は変わりません。 ===== */
+var PRINTS = [];
+var TESTS = [];
+var POOL = [];       /* 1問ずつに分けた出題プール */
+var state = null;    /* {drawn:[...], selected:[...], graded:bool} */
+
+function extractArray(text, varName) {
+  var marker = 'var ' + varName + ' = ';
+  var i = text.indexOf(marker);
+  if (i < 0) throw new Error('not found: ' + varName);
+  var start = text.indexOf('[', i);
+  var depth = 0, inStr = false, esc = false;
+  for (var k = start; k < text.length; k++) {
+    var c = text.charAt(k);
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === '\\') esc = true;
+      else if (c === '"') inStr = false;
+    } else {
+      if (c === '"') inStr = true;
+      else if (c === '[') depth++;
+      else if (c === ']') { depth--; if (depth === 0) return JSON.parse(text.slice(start, k + 1)); }
+    }
+  }
+  throw new Error('parse failed: ' + varName);
+}
+
+function baseUnit(item) {
+  var u = String(item.unit || '');
+  if (item.kind === 'test') u = u.replace(/[\s　]*確認テスト$/, '');
+  u = u.replace(/（\d+）$/, '');
+  return u;
+}
+
+function buildPool() {
+  POOL = [];
+  var items = PRINTS.concat(TESTS);
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    var answers = parseAnswers(item.answers, item.questions.length);
+    var exps = String(item.explanation || '').split('\n');
+    for (var q = 0; q < item.questions.length; q++) {
+      if (!answers[q]) continue;
+      POOL.push({
+        grade: item.grade, subject: item.subject, unit: baseUnit(item),
+        question: item.questions[q], answer: answers[q],
+        exp: exps[q] || '', item: item, qi: q, answers: answers
+      });
+    }
+  }
+}
+
+function currentFilter() {
+  return {
+    grade: document.getElementById('selGrade').value,
+    subject: document.getElementById('selSubject').value,
+    unit: document.getElementById('selUnit').value
+  };
+}
+function matchFilter(e, f) {
+  if (f.grade !== 'all' && String(e.grade) !== f.grade) return false;
+  if (f.subject !== 'all' && e.subject !== f.subject) return false;
+  if (f.unit !== 'all' && e.unit !== f.unit) return false;
+  return true;
+}
+function filteredPool() {
+  var f = currentFilter();
+  var out = [];
+  for (var i = 0; i < POOL.length; i++) if (matchFilter(POOL[i], f)) out.push(POOL[i]);
+  return out;
+}
+
+function refreshUnits() {
+  var g = document.getElementById('selGrade').value;
+  var s = document.getElementById('selSubject').value;
+  var seen = {}, units = [];
+  for (var i = 0; i < POOL.length; i++) {
+    var e = POOL[i];
+    if (g !== 'all' && String(e.grade) !== g) continue;
+    if (s !== 'all' && e.subject !== s) continue;
+    if (!seen[e.unit]) { seen[e.unit] = true; units.push(e.unit); }
+  }
+  units.sort();
+  var sel = document.getElementById('selUnit');
+  var prev = sel.value;
+  sel.innerHTML = '';
+  var o = document.createElement('option'); o.value = 'all'; o.textContent = 'すべての単元'; sel.appendChild(o);
+  units.forEach(function (u) { var op = document.createElement('option'); op.value = u; op.textContent = u; sel.appendChild(op); });
+  if (prev !== 'all' && seen[prev]) sel.value = prev;
+  refreshCount();
+}
+function refreshCount() {
+  var n = filteredPool().length;
+  document.getElementById('poolCount').textContent = '対象の問題：' + n + '問（この中から10問をランダムで出します）';
+  document.getElementById('startBtn').disabled = n < 1;
+}
+
+function drawQuestions() {
+  var pool = filteredPool();
+  var rnd = makeRng((Date.now() % 2147483647) + Math.floor(Math.random() * 1000000) + 11);
+  var shuffled = shuffledArr(pool, rnd);
+  var drawn = shuffled.slice(0, Math.min(10, shuffled.length));
+  drawn.forEach(function (d) {
+    var bc = buildChoices(d.item, d.answers, d.qi, rnd);
+    d.choices = bc.choices; d.correctIndex = bc.correctIndex;
+    d.hint = makeHint(d.item, d.qi, d.answer);
+  });
+  return drawn;
+}
+
+function filterLabel() {
+  var f = currentFilter();
+  var g = f.grade === 'all' ? '全学年' : '中学' + f.grade + '年';
+  var s = f.subject === 'all' ? '全教科' : f.subject;
+  var u = f.unit === 'all' ? 'すべての単元' : f.unit;
+  return g + '・' + s + '・' + u;
+}
+
+function startQuiz() {
+  var drawn = drawQuestions();
+  state = { drawn: drawn, selected: drawn.map(function () { return -1; }), graded: false };
+  document.getElementById('setupView').hidden = true;
+  document.getElementById('quizView').hidden = false;
+  document.getElementById('resultBox').hidden = true;
+  document.getElementById('afterActions').hidden = true;
+  document.getElementById('gradeBtn').hidden = false;
+  var meta = document.getElementById('quizMeta');
+  meta.innerHTML = '';
+  [filterLabel(), 'ランダム10問', '3択クイズ'].forEach(function (t, i) {
+    var sp = document.createElement('span'); sp.className = 'pill' + (i === 1 ? ' orange' : ''); sp.textContent = t; meta.appendChild(sp);
+  });
+  renderQuestions();
+  /* 問題が新しくなったら、ページの一番上ではなく1問目のカードが見える位置に合わせる */
+  var firstCard = document.querySelector('#quizList .qcard');
+  if (firstCard) {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    firstCard.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  } else {
+    window.scrollTo(0, 0);
+  }
+}
+
+function renderQuestions() {
+  var list = document.getElementById('quizList');
+  list.innerHTML = '';
+  var labels = ['ア', 'イ', 'ウ'];
+  state.drawn.forEach(function (d, qi) {
+    var card = document.createElement('article'); card.className = 'qcard';
+    var head = document.createElement('div'); head.className = 'qhead';
+    var num = document.createElement('span'); num.className = 'qnum'; num.textContent = '問' + (qi + 1);
+    var badge = document.createElement('span'); badge.className = 'badge'; badge.id = 'badge-' + qi; badge.hidden = true;
+    head.appendChild(num); head.appendChild(badge); card.appendChild(head);
+    var src = document.createElement('div');
+    var p1 = document.createElement('span'); p1.className = 'pill'; p1.textContent = '中学' + d.grade + '年';
+    var p2 = document.createElement('span'); p2.className = 'pill'; p2.textContent = d.subject;
+    var p3 = document.createElement('span'); p3.className = 'pill'; p3.textContent = d.unit;
+    src.appendChild(p1); src.appendChild(p2); src.appendChild(p3); card.appendChild(src);
+    var qt = document.createElement('p'); qt.className = 'qtext'; qt.textContent = d.question; card.appendChild(qt);
+    var ch = document.createElement('div'); ch.className = 'choices'; ch.setAttribute('role', 'radiogroup'); ch.setAttribute('aria-label', '問' + (qi + 1) + 'の選択肢');
+    d.choices.forEach(function (ct, ci) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'choice'; b.id = 'choice-' + qi + '-' + ci;
+      var lab = document.createElement('span'); lab.className = 'lab'; lab.textContent = labels[ci];
+      b.appendChild(lab); b.appendChild(document.createTextNode(ct));
+      b.onclick = function () { selectChoice(qi, ci); };
+      ch.appendChild(b);
+    });
+    card.appendChild(ch);
+    var hb = document.createElement('button'); hb.type = 'button'; hb.className = 'hintbtn'; hb.textContent = 'ヒントを見る';
+    var hbox = document.createElement('div'); hbox.className = 'hintbox'; hbox.hidden = true; hbox.textContent = d.hint;
+    hb.onclick = function () { hbox.hidden = !hbox.hidden; hb.textContent = hbox.hidden ? 'ヒントを見る' : 'ヒントを閉じる'; };
+    card.appendChild(hb); card.appendChild(hbox);
+    var exp = document.createElement('div'); exp.className = 'expbox'; exp.id = 'exp-' + qi; exp.hidden = true;
+    var al = document.createElement('p'); al.className = 'ansline'; al.textContent = '答え：' + d.answer;
+    var ex = document.createElement('div'); ex.className = 'exp'; ex.textContent = d.exp || '（解説はありません）';
+    exp.appendChild(al); exp.appendChild(ex); card.appendChild(exp);
+    list.appendChild(card);
+  });
+}
+
+function selectChoice(qi, ci) {
+  if (!state || state.graded) return;
+  state.selected[qi] = ci;
+  state.drawn[qi].choices.forEach(function (_, cj) {
+    document.getElementById('choice-' + qi + '-' + cj).classList.toggle('sel', cj === ci);
+  });
+}
+
+function gradeQuiz() {
+  if (!state || state.graded) return;
+  var unanswered = state.selected.indexOf(-1);
+  if (unanswered >= 0) {
+    var el = document.getElementById('choice-' + unanswered + '-0');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById('scoreMsg').textContent = '';
+    var rb = document.getElementById('resultBox'); rb.hidden = false;
+    document.getElementById('scoreText').textContent = 'まだ答えていない問題があります';
+    document.getElementById('scoreMsg').textContent = '問' + (unanswered + 1) + 'が未回答です。全部の問に答えてから、もう一度「答え合わせをする」を押してください。';
+    document.getElementById('afterActions').hidden = true;
+    return;
+  }
+  state.graded = true;
+  var score = 0;
+  state.drawn.forEach(function (d, qi) {
+    var ok = state.selected[qi] === d.correctIndex;
+    if (ok) score++;
+    var badge = document.getElementById('badge-' + qi);
+    badge.hidden = false; badge.textContent = ok ? '正解' : '不正解'; badge.className = 'badge ' + (ok ? 'ok' : 'ng');
+    d.choices.forEach(function (_, cj) {
+      var b = document.getElementById('choice-' + qi + '-' + cj);
+      b.disabled = true; b.classList.remove('sel');
+      if (cj === d.correctIndex) b.classList.add('right');
+      else if (cj === state.selected[qi]) b.classList.add('wrong');
+    });
+    document.getElementById('exp-' + qi).hidden = false;
+  });
+  document.getElementById('gradeBtn').hidden = true;
+  var rb2 = document.getElementById('resultBox'); rb2.hidden = false;
+  document.getElementById('scoreText').textContent = score + ' / ' + state.drawn.length + ' 問 正解';
+  document.getElementById('scoreMsg').textContent = score === state.drawn.length ? '全問正解です。この調子で続けましょう。' : '間違えた問題は、下の解説を読んでから解き直すと力になります。';
+  document.getElementById('afterActions').hidden = false;
+  rb2.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+document.getElementById('selGrade').addEventListener('change', refreshUnits);
+document.getElementById('selSubject').addEventListener('change', refreshUnits);
+document.getElementById('selUnit').addEventListener('change', refreshCount);
+document.getElementById('startBtn').addEventListener('click', startQuiz);
+document.getElementById('gradeBtn').addEventListener('click', gradeQuiz);
+document.getElementById('retryBtn').addEventListener('click', startQuiz);
+document.getElementById('changeBtn').addEventListener('click', function () {
+  document.getElementById('quizView').hidden = true;
+  document.getElementById('setupView').hidden = false;
+  window.scrollTo(0, 0);
+});
+
+fetch('../index.html').then(function (res) {
+  if (!res.ok) throw new Error('fetch failed');
+  return res.text();
+}).then(function (text) {
+  var allPrints = extractArray(text, 'PRINTS');
+  PRINTS = allPrints.filter(function (p) { return (p.kind || 'print') === 'print'; });
+  TESTS = extractArray(text, 'TESTS');
+  buildPool();
+  refreshUnits();
+}).catch(function () {
+  document.getElementById('poolCount').textContent = '';
+  document.getElementById('loadError').hidden = false;
+});
+</script>
+</body>
+</html>

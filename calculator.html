@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>【無料】電卓｜オンライン関数電卓（平方根・累乗・三角関数・対数・消費税）登録不要【中学生プリント】</title>
+<meta name="description" content="無料のオンライン電卓・関数電卓です。平方根・累乗・三角関数（sin・cos・tan）・対数・円周率π・階乗・パーセント・消費税（税込・税抜）の計算ができます。登録不要・インストール不要で、スマホ・タブレット・パソコンですぐに使えます。計算履歴・メモリー機能・キーボード入力対応の高性能電卓です。中学生の学習プリントサイト「中学生プリント」の電卓専用ページです。">
+<meta name="keywords" content="電卓,オンライン電卓,関数電卓,電卓 無料,計算機,平方根 計算,三角関数 計算,消費税 計算,パーセント 計算,累乗 計算,対数 計算,電卓 アプリ 不要">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0f3b4d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="中学生プリント">
+<meta property="og:title" content="【無料】電卓｜オンライン関数電卓（平方根・累乗・三角関数・消費税）登録不要【中学生プリント】">
+<meta property="og:description" content="登録不要・無料のオンライン関数電卓。平方根・累乗・三角関数・対数・消費税計算に対応し、スマホでも使えます。計算履歴・メモリー・キーボード入力つき。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="ogp.png">
+<meta property="og:url" content="https://takuhisa536-wq.github.io/print-site/assets/calculator.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【無料】電卓｜オンライン関数電卓（平方根・累乗・三角関数・消費税）登録不要【中学生プリント】">
+<meta name="twitter:description" content="登録不要・無料のオンライン関数電卓。平方根・累乗・三角関数・対数・消費税計算に対応。計算履歴・メモリー・キーボード入力つき。">
+<meta name="twitter:image" content="ogp.png">
+<meta name="author" content="中学生プリント">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="canonical" href="https://takuhisa536-wq.github.io/print-site/assets/calculator.html">
+<!-- 広告の設定（電卓専用ページ）：忍者AdMaxの枠が3か所あります（1上部／2中部／3下部）。上部と下部には当面、トップページと同じ枠のタグを入れています。電卓ページ用に新しい枠を発行したら、各枠の中身をそのタグに差し替えてください。Amazonリンクはこのページ下部の CALC_AMAZON_LINKS に、Amazonアソシエイトで作ったリンク先URLを入れるとボタンが有効になります。 -->
+<style>
+:root{color-scheme:light;--bg:#ffffff;--paper:#fff;--ink:#1a2a2e;--muted:#5b6b6e;--line:#dde6ea;--navy:#0f3b4d;--teal:#0e7c6b;--orange:#ff6b35;--yellow:#ffd23f;--soft:#f2f7f5;--soft2:#fff6ec}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;--bg:#0b181f;--paper:#13242e;--ink:#e9f2f3;--muted:#a5bcc3;--line:#2b454f;--navy:#8fd0e6;--teal:#35c3a5;--orange:#ff8a5c;--soft:#173039;--soft2:#33241a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic",Meiryo,system-ui,sans-serif;line-height:1.7}
+h1,h2,h3{line-height:1.3;margin:0}
+a{color:inherit}
+button{font:inherit;cursor:pointer;min-height:44px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;flex-wrap:wrap}
+.logo{font-weight:900;font-size:18px;text-decoration:none}
+.logo span{background:var(--navy);color:#fff;border-radius:8px;padding:2px 8px;margin-right:4px}
+@media (prefers-color-scheme: dark){.logo span{color:#0f3b4d}}
+.nav{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:14px;font-weight:700}
+.nav a{text-decoration:none;padding:6px 2px}
+.nav a[aria-current="page"]{color:var(--teal);text-decoration:underline;text-underline-offset:4px}
+.crumb{font-size:13px;color:var(--muted);margin:18px 0 10px}
+.crumb a{font-weight:700}
+.page-head h1{font-size:clamp(26px,6vw,38px);color:var(--navy)}
+.page-head p{color:var(--muted);margin:10px 0 0;max-width:860px}
+.section{margin:28px 0}
+.section-head h2{font-size:clamp(20px,4.5vw,26px);color:var(--navy)}
+.section-head p{color:var(--muted);margin:8px 0 0}
+.note{font-size:13px;color:var(--muted)}
+.admax-slot{margin:16px 0 2px;background:var(--soft);border:1px dashed #b7ccd1;border-radius:14px;padding:12px;text-align:center;overflow:hidden;min-height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+@media(max-width:700px){.admax-slot{min-height:290px}}
+@media (prefers-color-scheme: dark){.admax-slot{border-color:#2b454f}}
+.admax-slot .ad-label{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--muted)}
+.admax-slot .ad-placeholder{margin:2px 0 0;font-size:12px;color:var(--muted)}
+.amazon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+@media(max-width:800px){.amazon-grid{grid-template-columns:1fr}}
+.amazon-box{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.amazon-box h3{font-size:15px;margin:0;color:var(--navy)}
+.amazon-box p{margin:0;font-size:14px;color:var(--muted);flex:1}
+.amazon-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border-radius:12px;background:var(--orange);color:#fff;font-weight:900;text-decoration:none;font-size:14px;border:2px solid var(--orange)}
+.amazon-btn.is-disabled{background:#eef1f1;color:var(--muted);border-color:var(--line);opacity:.8}
+@media (prefers-color-scheme: dark){.amazon-btn.is-disabled{background:#22363f}}
+.amazon-note{font-size:12px;color:var(--muted);margin:10px 0 0}
+.cta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+@media(max-width:800px){.cta-grid{grid-template-columns:1fr}}
+.cta-card{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:16px;text-decoration:none;display:block}
+.cta-card strong{display:block;font-size:16px;color:var(--navy);margin-bottom:4px}
+.cta-card span{font-size:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 calc(32px + env(safe-area-inset-bottom));font-size:13px;color:var(--muted)}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap;margin-bottom:10px;font-weight:700}
+footer a{text-decoration:none}
+@media print{.admax-slot,.amazon-grid,.cta-grid,.topbar{display:none!important}}
+
+/* ===== 電卓（専用セクション） ===== */
+.calc-shell{background:var(--paper);border:2px solid var(--line);border-radius:20px;padding:16px;max-width:860px}
+.calc-display{background:#0f3b4d;color:#eaf6f9;border-radius:14px;padding:14px 16px;min-height:104px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.calc-sub{display:flex;gap:10px;align-items:center;font-size:12px;font-weight:800;color:#9cc8d8;min-height:16px}
+.calc-sub .calc-prev{margin-left:auto;color:#cfe6ee;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70%}
+.calc-mem{background:#ffd23f;color:#0f3b4d;border-radius:6px;padding:0 6px}
+.calc-expr{font-size:clamp(24px,5.5vw,34px);font-weight:800;line-height:1.25;word-break:break-all;font-variant-numeric:tabular-nums;text-align:right}
+.calc-result{font-size:15px;color:#ffd23f;font-weight:800;text-align:right;min-height:20px;word-break:break-all}
+.calc-tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.calc-tools button{border:2px solid var(--navy);background:var(--paper);color:var(--navy);border-radius:999px;font-weight:800;font-size:13px;padding:7px 13px;min-height:40px;cursor:pointer}
+.calc-tools button.on{background:var(--navy);color:#fff}
+.calc-tools .tax{border-color:var(--line);color:var(--ink)}
+.calc-pads{display:flex;gap:12px;align-items:flex-start}
+.calc-sci{flex:1 1 46%;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.calc-main{flex:1 1 54%;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.calc-pads button{border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:12px;font-weight:800;font-size:17px;min-height:54px;cursor:pointer;padding:4px 2px}
+.calc-pads button:active{transform:scale(.97)}
+.calc-pads button.op{background:var(--navy);color:#fff;border-color:var(--navy)}
+.calc-pads button.eq{background:var(--orange);color:#fff;border-color:var(--orange);font-size:20px}
+.calc-pads button.ac{background:#fdeceb;color:#b3271e;border-color:#f3c1bc}
+.calc-pads button.fn{font-size:14px;background:var(--paper)}
+.calc-pads button.mem{font-size:13px;background:var(--paper);color:var(--navy)}
+.calc-history{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.calc-history h3{font-size:15px;margin:0 0 8px;color:var(--navy)}
+.calc-history ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.calc-history li button{width:100%;text-align:left;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.calc-history li button strong{color:var(--navy)}
+.calc-guide{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.calc-guide article{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px}
+.calc-guide h3{font-size:16px;margin:0 0 6px}
+.calc-guide p,.calc-guide li{font-size:14px;color:var(--muted)}
+.calc-guide ul{margin:6px 0 0;padding-left:18px}
+.calc-guide a{font-weight:800}
+@media(max-width:700px){.calc-pads{flex-direction:column}.calc-sci,.calc-main{width:100%}.calc-pads button{min-height:52px;font-size:16px}.calc-guide{grid-template-columns:1fr}.calc-shell{padding:12px}}
+@media print{.calc-pads,.calc-tools{display:none}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"中学生プリント 無料電卓（関数電卓）","url":"https://takuhisa536-wq.github.io/print-site/assets/calculator.html","alternateName":["オンライン電卓","関数電卓","電卓"],"applicationCategory":"UtilitiesApplication","operatingSystem":"Any (Web browser)","browserRequirements":"JavaScript対応ブラウザ","inLanguage":"ja","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"featureList":"四則計算,かっこ計算,平方根,累乗,三角関数,逆三角関数,対数,円周率,階乗,パーセント,消費税計算（税込・税抜）,メモリー機能,計算履歴,キーボード入力","description":"登録不要・無料のオンライン関数電卓。平方根・累乗・三角関数・対数・消費税計算に対応し、スマホでも使えます。中学生の学習プリントサイト「中学生プリント」の電卓専用ページです。"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"この電卓は無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料です。会員登録もアプリのインストールも不要で、ブラウザですぐに使えます。"}},{"@type":"Question","name":"関数電卓として何が計算できますか？","acceptedAnswer":{"@type":"Answer","text":"平方根（√）、累乗（x²・x^y）、三角関数（sin・cos・tan）と逆三角関数、対数（ln・log）、円周率π、階乗、パーセント、消費税（税込・税抜）の計算ができます。DEG（度）とRAD（弧度法）の切り替えもできます。"}},{"@type":"Question","name":"スマホでも電卓は使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スマホ・タブレット・パソコンで使えます。ボタンは大きめで押しやすく、計算履歴も残ります。履歴はページを開いている間だけ有効です。"}}]}]}</script>
+</head>
+<body>
+<header class="topbar"><div class="wrap topbar-in">
+<a class="logo" href="../index.html"><span>無料プリント</span>中学生プリント</a>
+<nav class="nav" aria-label="メニュー"><a href="../index.html#prints">プリント一覧</a><a href="calculator.html" aria-current="page">電卓</a><a href="../index.html#tests">単元確認テスト</a><a href="../index.html#exam">受験対策</a><a href="../index.html#eiken">英検対策</a><a href="../index.html#contact">お問い合わせ</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">中学生プリント トップ</a> ＞ 電卓</p>
+<div class="page-head"><h1>電卓｜無料オンライン電卓・関数電卓（登録不要）</h1><p>アプリのインストールも会員登録も不要で、スマホ・タブレット・パソコンですぐに使えます。ふつうの四則計算はもちろん、平方根（√）、累乗、三角関数（sin・cos・tan）、対数、円周率π、階乗、パーセント、消費税の計算までできる高性能な関数電卓です。宿題やプリントの検算、買い物の計算などに使ってください。計算履歴も残るので、続けて計算するときにも便利です。</p></div>
+
+<!-- 忍者AdMax（電卓ページ・上部）：当面はトップページ上部と同じ枠のタグです。電卓ページ用に新しい枠を発行したら差し替えてください -->
+<div class="admax-slot" data-admax="calc-top" role="complementary" aria-label="広告（忍者AdMax）">
+<span class="ad-label">広告</span>
+<!-- admax -->
+<script src="https://adm.shinobi.jp/o/a68f4b5de54a86288c3cbb54a958d060"></script>
+<!-- admax -->
+</div>
+
+<section class="section" id="calculator">
+
+<div class="calc-shell" id="calcShell">
+<div class="calc-display">
+<div class="calc-sub"><span id="calcAngleMode">DEG（度）</span><span class="calc-mem" id="calcMemMark" hidden>M</span><span class="calc-prev" id="calcPrev"></span></div>
+<div class="calc-expr" id="calcExpr">0</div>
+<div class="calc-result" id="calcResult" aria-live="polite"></div>
+</div>
+<div class="calc-tools">
+<button type="button" id="calcSciToggle" class="on" aria-expanded="true">関数キーを隠す</button>
+<button type="button" id="calcAngleBtn">DEG ⇄ RAD</button>
+<button type="button" id="calcCopyBtn">答えをコピー</button>
+<button type="button" class="tax" data-tax="in10">税込10%</button>
+<button type="button" class="tax" data-tax="in8">税込8%</button>
+<button type="button" class="tax" data-tax="out10">税抜10%</button>
+<button type="button" class="tax" data-tax="out8">税抜8%</button>
+</div>
+<div class="calc-pads">
+<div class="calc-sci" id="calcSciPad" role="group" aria-label="関数キー">
+<button type="button" class="fn" data-ins="sin(">sin</button>
+<button type="button" class="fn" data-ins="cos(">cos</button>
+<button type="button" class="fn" data-ins="tan(">tan</button>
+<button type="button" class="fn" data-ins="√(">√</button>
+<button type="button" class="fn" data-ins="^2">x²</button>
+<button type="button" class="fn" data-ins="asin(">sin⁻¹</button>
+<button type="button" class="fn" data-ins="acos(">cos⁻¹</button>
+<button type="button" class="fn" data-ins="atan(">tan⁻¹</button>
+<button type="button" class="fn" data-ins="^">x^y</button>
+<button type="button" class="fn" data-ins="^(−1)">1/x</button>
+<button type="button" class="fn" data-ins="ln(">ln</button>
+<button type="button" class="fn" data-ins="log(">log</button>
+<button type="button" class="fn" data-ins="π">π</button>
+<button type="button" class="fn" data-ins="e">e</button>
+<button type="button" class="fn" data-ins="!">n!</button>
+<button type="button" class="mem" data-act="mc">MC</button>
+<button type="button" class="mem" data-act="mr">MR</button>
+<button type="button" class="mem" data-act="mplus">M+</button>
+<button type="button" class="mem" data-act="mminus">M−</button>
+<button type="button" class="fn" data-ins="Ans">Ans</button>
+</div>
+<div class="calc-main" role="group" aria-label="数字キー">
+<button type="button" data-ins="7">7</button>
+<button type="button" data-ins="8">8</button>
+<button type="button" data-ins="9">9</button>
+<button type="button" class="ac" data-act="ac">AC</button>
+<button type="button" data-ins="4">4</button>
+<button type="button" data-ins="5">5</button>
+<button type="button" data-ins="6">6</button>
+<button type="button" data-act="bs" aria-label="1つ消す">⌫</button>
+<button type="button" data-ins="1">1</button>
+<button type="button" data-ins="2">2</button>
+<button type="button" data-ins="3">3</button>
+<button type="button" class="op" data-ins="÷">÷</button>
+<button type="button" data-ins="0">0</button>
+<button type="button" data-ins=".">.</button>
+<button type="button" data-act="neg">+/−</button>
+<button type="button" class="op" data-ins="×">×</button>
+<button type="button" data-ins="(">（</button>
+<button type="button" data-ins=")">）</button>
+<button type="button" class="op" data-ins="−">−</button>
+<button type="button" class="op" data-ins="+">+</button>
+<button type="button" data-ins="%">%</button>
+<button type="button" class="eq" data-act="eq" style="grid-column:span 3">=</button>
+</div>
+</div>
+<div class="calc-history">
+<h3>計算履歴</h3>
+<ul id="calcHistList"></ul>
+<p class="note" id="calcHistEmpty">まだ履歴はありません。「=」を押すと、ここに式と答えが残ります（このページを開いている間だけです）。履歴を押すと、その答えを次の計算に使えます。</p>
+<div class="calc-tools" style="margin:8px 0 0"><button type="button" id="calcHistClear">履歴を消す</button><span class="note" id="calcCopyDone" role="status"></span></div>
+</div>
+</div>
+<div class="calc-guide">
+<article><h3>この電卓でできる計算</h3><ul>
+<li>四則計算（＋ − × ÷）とかっこ計算、連続計算（Ansで前の答えを呼び出し）</li>
+<li>平方根 √、累乗 x²・x^y、逆数 1/x、階乗 n!</li>
+<li>三角関数 sin・cos・tan と逆三角関数（DEG＝度／RAD＝弧度法の切り替えつき）</li>
+<li>対数 ln（自然対数）・log（常用対数）、円周率 π、ネイピア数 e</li>
+<li>パーセント（%は「100で割る」計算として扱います。例：1980×8% ＝ 158.4）</li>
+<li>消費税ボタン（税込10%・税込8%・税抜10%・税抜8%を1タップで計算）</li>
+<li>メモリー（MC・MR・M+・M−）と計算履歴（タップで再利用）</li>
+</ul></article>
+<article><h3>キーボードでも使えます</h3><p>パソコンでは、電卓を一度クリックしてからキーボードで入力できます。</p><ul>
+<li>数字キー・「.」：数字と小数点</li>
+<li>「+」「-」「*」「/」：＋ − × ÷（*は×、/は÷として入力されます）</li>
+<li>「(」「)」「%」「^」：かっこ、パーセント、累乗</li>
+<li>Enter または「=」：計算する</li>
+<li>Backspace：1文字消す／ Esc：全部消す（AC）</li>
+</ul></article>
+<article><h3>中学数学での使いどころ</h3><p>検算に使うと、計算ミスに気づけます。考え方そのものはプリントで練習するのがおすすめです。</p><ul>
+<li>√2 や √3 の近似値 → <a href="../index.html?q=平方根">平方根のプリント</a></li>
+<li>3²＋4² の平方根（三平方の定理）→ <a href="../index.html?q=三平方">三平方の定理のプリント</a></li>
+<li>円の面積 3.14×r×r → <a href="../index.html?q=平面図形">平面図形のプリント</a></li>
+<li>食塩水の濃度 → <a href="../index.html?q=水溶液">状態変化と水溶液のプリント</a></li>
+<li>オームの法則 V＝I×R → <a href="../index.html?q=電流">電流と電圧のプリント</a></li>
+<li>数字を変えた類題で反復練習 → <a href="../index.html#prints">反復ドリル（プリント一覧）</a></li>
+</ul></article>
+<article><h3>電卓について よくある質問</h3>
+<p><strong>無料ですか？</strong> はい、完全無料です。登録もインストールも不要です。</p>
+<p><strong>スマホでも使えますか？</strong> はい。ボタンを大きくしてあるので、スマホでも押しやすく作ってあります。</p>
+<p><strong>計算履歴は保存されますか？</strong> ページを開いている間だけ残ります。閉じると消えます（サーバーには送られません）。</p>
+<p><strong>テストに持ち込めますか？</strong> 学校のテストでは電卓が使えないことがほとんどです。ふだんの練習では検算に使い、本番では自分の計算力を頼れるようにしておきましょう。</p></article>
+</div>
+</section>
+
+<!-- 忍者AdMax（電卓ページ・中部）：電卓ページ用に新しい枠を発行したら、下の案内文と入れ替えてタグをそのまま貼ってください -->
+<div class="admax-slot" data-admax="calc-middle" role="complementary" aria-label="広告（忍者AdMax）">
+<span class="ad-label">広告</span>
+<p class="ad-placeholder">広告枠（電卓ページ・中部）：忍者AdMaxで電卓ページ用の枠を発行して、タグをここに貼ってください。</p>
+</div>
+
+<section class="section" id="amazon-calc"><div class="section-head"><h2>電卓と合わせてそろえたい学習グッズ｜Amazon</h2><p>オンライン電卓は検算に便利ですが、学校の授業や自宅学習用に本物の関数電卓が1台あると、電池切れやネット環境を気にせず使えます。このページのリンクはAmazonアソシエイト・リンクです（リンク経由で購入されると、サイト運営の助けになります）。</p></div>
+<div class="amazon-grid">
+<div class="amazon-box"><h3>関数電卓</h3><p>平方根・累乗・三角関数・分数計算ができる関数電卓。高校の数学でもそのまま使えるタイプがおすすめです。</p><a class="amazon-btn is-disabled" id="calcAmzCalc" href="#">Amazonで見る</a></div>
+<div class="amazon-box"><h3>電卓ケース・文房具</h3><p>電卓をカバンの中で守るケースや、計算用紙・ノートなどの文房具をまとめてそろえられます。</p><a class="amazon-btn is-disabled" id="calcAmzGoods" href="#">Amazonで見る</a></div>
+<div class="amazon-box"><h3>計算ドリル・参考書</h3><p>電卓で検算しながら解く計算ドリルや、中学数学の参考書。プリントと合わせて使うと練習量が増やせます。</p><a class="amazon-btn is-disabled" id="calcAmzBook" href="#">Amazonで見る</a></div>
+</div>
+<p class="amazon-note" id="calcAmazonStatus">準備中：Amazonアソシエイトのリンクを設定すると、「Amazonで見る」ボタンが有効になります。設定はページ下部のスクリプト内の CALC_AMAZON_LINKS にリンク先URLを入れるだけです。</p>
+</section>
+
+<section class="section" id="to-prints"><div class="section-head"><h2>計算の練習はプリントで｜中学生プリント</h2><p>電卓で検算したら、同じ単元のプリントで手を動かして練習しましょう。全694テーマ・10913問と単元確認テスト740問が無料で使えます。</p></div>
+<div class="cta-grid">
+<a class="cta-card" href="../index.html#prints"><strong>プリント一覧 →</strong><span>中1・中2・中3の数学・英語・理科・国語・社会。PDF印刷と3択クイズに対応。</span></a>
+<a class="cta-card" href="../index.html#tests"><strong>単元確認テスト →</strong><span>1単元10問の力試し。答えと1問ずつの解説つきです。</span></a>
+<a class="cta-card" href="../index.html?q=平方根"><strong>平方根のプリント →</strong><span>√の計算練習はこちらの単元から。反復ドリルもあります。</span></a>
+</div>
+</section>
+
+<!-- 忍者AdMax（電卓ページ・下部）：当面はトップページ下部と同じ枠のタグです。電卓ページ用に新しい枠を発行したら差し替えてください -->
+<div class="admax-slot" data-admax="calc-bottom" role="complementary" aria-label="広告（忍者AdMax）">
+<span class="ad-label">広告</span>
+<!-- admax -->
+<script src="https://adm.shinobi.jp/o/557409589b9762368d2250914c9e435c"></script>
+<!-- admax -->
+</div>
+</main>
+<footer><div class="wrap">
+<nav aria-label="フッターメニュー"><a href="../index.html">中学生プリント トップ</a><a href="../index.html#prints">プリント一覧</a><a href="../index.html#tests">単元確認テスト</a><a href="../index.html#exam">受験対策</a><a href="../index.html#eiken">英検対策</a><a href="../index.html#usage">ご利用について</a><a href="../index.html#contact">お問い合わせ</a></nav>
+<p>中学生プリント｜電卓ページ（無料オンライン関数電卓）。計算履歴はこのページを開いている間だけ残り、サーバーには送られません。</p>
+</div></footer>
+<script>
+(function(){
+"use strict";
+var exprEl=document.getElementById('calcExpr');
+var resEl=document.getElementById('calcResult');
+var prevEl=document.getElementById('calcPrev');
+var angleEl=document.getElementById('calcAngleMode');
+var memEl=document.getElementById('calcMemMark');
+var histList=document.getElementById('calcHistList');
+var histEmpty=document.getElementById('calcHistEmpty');
+if(!exprEl) return;
+var expr='';
+var lastAns=0;
+var memory=0;
+var hasMem=false;
+var degMode=true;
+var justEq=false;
+var history=[];
+var calcActive=false;
+
+/* ---------- 式のパーサ（eval不使用） ---------- */
+function tokenize(src){
+  var toks=[]; var i=0;
+  while(i<src.length){
+    var c=src.charAt(i);
+    if(c===' '){ i++; continue; }
+    if(c>='0'&&c<='9'||c==='.'){
+      var j=i; var dot=false;
+      while(j<src.length&&((src.charAt(j)>='0'&&src.charAt(j)<='9')||src.charAt(j)==='.')){
+        if(src.charAt(j)==='.'){ if(dot) throw new Error('小数点の位置がおかしいです'); dot=true; }
+        j++;
+      }
+      var numStr=src.slice(i,j);
+      if(numStr==='.'||numStr==='') throw new Error('数字の入力がおかしいです');
+      toks.push({t:'num', v:parseFloat(numStr)});
+      i=j; continue;
+    }
+    if((c>='a'&&c<='z')||(c>='A'&&c<='Z')){
+      var k=i;
+      while(k<src.length&&((src.charAt(k)>='a'&&src.charAt(k)<='z')||(src.charAt(k)>='A'&&src.charAt(k)<='Z'))) k++;
+      toks.push({t:'id', v:src.slice(i,k)});
+      i=k; continue;
+    }
+    if('+-*/^(),%!'.indexOf(c)>=0){ toks.push({t:c}); i++; continue; }
+    throw new Error('使えない文字があります：'+c);
+  }
+  return toks;
+}
+function calcParse(src){
+  var toks=tokenize(src);
+  var pos=0;
+  function peek(){ return pos<toks.length?toks[pos]:null; }
+  function next(){ return pos<toks.length?toks[pos++]:null; }
+  function applyFunc(name, x){
+    if(name==='sqrt'){ if(x<0) throw new Error('負の数の平方根は計算できません'); return Math.sqrt(x); }
+    if(name==='sin') return Math.sin(degMode?x*Math.PI/180:x);
+    if(name==='cos') return Math.cos(degMode?x*Math.PI/180:x);
+    if(name==='tan'){
+      if(degMode){ var m=((x%180)+180)%180; if(m===90) throw new Error('tan90°は定義できません'); }
+      return Math.tan(degMode?x*Math.PI/180:x);
+    }
+    if(name==='asin'){ if(x<-1||x>1) throw new Error('sin⁻¹は-1〜1の範囲で入力してください'); var r=Math.asin(x); return degMode?r*180/Math.PI:r; }
+    if(name==='acos'){ if(x<-1||x>1) throw new Error('cos⁻¹は-1〜1の範囲で入力してください'); var r2=Math.acos(x); return degMode?r2*180/Math.PI:r2; }
+    if(name==='atan'){ var r3=Math.atan(x); return degMode?r3*180/Math.PI:r3; }
+    if(name==='ln'){ if(x<=0) throw new Error('lnは正の数で入力してください'); return Math.log(x); }
+    if(name==='log'){ if(x<=0) throw new Error('logは正の数で入力してください'); return Math.log10(x); }
+    throw new Error('不明な関数です：'+name);
+  }
+  function fact(n){
+    if(n<0||Math.round(n)!==n) throw new Error('階乗は0以上の整数で入力してください');
+    if(n>170) throw new Error('階乗が大きすぎます');
+    var r=1; for(var i=2;i<=n;i++) r*=i; return r;
+  }
+  function parseExpr(){
+    var v=parseTerm();
+    while(true){ var tk=peek(); if(tk&&(tk.t==='+'||tk.t==='-')){ next(); var rhs=parseTerm(); v=(tk.t==='+')?v+rhs:v-rhs; } else break; }
+    return v;
+  }
+  function startsPrimary(tk){
+    return tk&&(tk.t==='num'||tk.t==='('||tk.t==='id');
+  }
+  function parseTerm(){
+    var v=parseFactor();
+    while(true){
+      var tk=peek();
+      if(tk&&(tk.t==='*'||tk.t==='/')){ next(); var rhs=parseFactor(); if(tk.t==='/'&&rhs===0) throw new Error('0で割ることはできません'); v=(tk.t==='*')?v*rhs:v/rhs; }
+      else if(startsPrimary(tk)){ var rhs2=parseFactor(); v=v*rhs2; }
+      else break;
+    }
+    return v;
+  }
+  function parseFactor(){
+    var base=parseUnary();
+    var tk=peek();
+    if(tk&&tk.t==='^'){ next(); var exp=parseFactor(); return Math.pow(base, exp); }
+    return base;
+  }
+  function parseUnary(){
+    var tk=peek();
+    if(tk&&tk.t==='-'){ next(); return -parseFactor(); }
+    if(tk&&tk.t==='+'){ next(); return parseFactor(); }
+    return parsePostfix();
+  }
+  function parsePostfix(){
+    var v=parsePrimary();
+    while(true){
+      var tk=peek();
+      if(tk&&tk.t==='%'){ next(); v=v/100; }
+      else if(tk&&tk.t==='!'){ next(); v=fact(v); }
+      else break;
+    }
+    return v;
+  }
+  function parsePrimary(){
+    var tk=next();
+    if(!tk) throw new Error('式が途中で終わっています');
+    if(tk.t==='num') return tk.v;
+    if(tk.t==='('){ var v=parseExpr(); var close=next(); if(!close||close.t!==')') throw new Error('かっこが閉じていません'); return v; }
+    if(tk.t==='id'){
+      var name=tk.v;
+      if(name==='pi') return Math.PI;
+      if(name==='e') return Math.E;
+      if(name==='Ans') return lastAns;
+      var open=peek();
+      if(open&&open.t==='('){ next(); var arg=parseExpr(); var cl=next(); if(!cl||cl.t!==')') throw new Error('かっこが閉じていません'); return applyFunc(name, arg); }
+      var arg2=parsePostfix();
+      return applyFunc(name, arg2);
+    }
+    throw new Error('式の形がおかしいです');
+  }
+  var result=parseExpr();
+  if(pos<toks.length) throw new Error('式の終わりがおかしいです');
+  return result;
+}
+function evaluateDisplay(){
+  var src=expr.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-').replace(/√/g,'sqrt').replace(/π/g,'pi');
+  return calcParse(src);
+}
+function fmt(v){
+  if(typeof v!=='number'||!isFinite(v)) throw new Error('計算結果が範囲外です');
+  if(v===0) return '0';
+  var av=Math.abs(v);
+  if(av>=1e15||av<1e-10){
+    var s=v.toExponential(8);
+    return s.replace(/(\.\d*?)0+e/,'$1e').replace(/\.e/,'e');
+  }
+  return String(parseFloat(v.toPrecision(12)));
+}
+/* ---------- 表示 ---------- */
+function render(){
+  exprEl.textContent=expr?expr:'0';
+  memEl.hidden=!hasMem;
+  angleEl.textContent=degMode?'DEG（度）':'RAD（弧度法）';
+}
+function showResult(text, isErr){
+  resEl.textContent=text;
+  resEl.style.color=isErr?'#ff9d94':'';
+}
+function pushHistory(exprText, resultText){
+  history.unshift({e:exprText, r:resultText});
+  if(history.length>30) history.pop();
+  renderHistory();
+}
+function renderHistory(){
+  histList.innerHTML='';
+  history.forEach(function(h){
+    var li=document.createElement('li');
+    var b=document.createElement('button');
+    b.type='button';
+    b.innerHTML='';
+    var span=document.createElement('span');
+    span.textContent=h.e+' = ';
+    var strong=document.createElement('strong');
+    strong.textContent=h.r;
+    b.appendChild(span); b.appendChild(strong);
+    b.addEventListener('click', function(){
+      expr=h.r; justEq=false; showResult('履歴の答えを入力しました', false); render();
+    });
+    li.appendChild(b);
+    histList.appendChild(li);
+  });
+  histEmpty.hidden=history.length>0;
+}
+/* ---------- 操作 ---------- */
+function insertText(s){
+  if(justEq){
+    if(/^[0-9.]$/.test(s)||s==='('||s==='√('||s==='π'||s==='e'){ expr=''; }
+    justEq=false;
+  }
+  expr+=s;
+  showResult('', false);
+  render();
+}
+function doEquals(){
+  if(!expr) return;
+  try{
+    var v=evaluateDisplay();
+    var text=fmt(v);
+    prevEl.textContent=expr+' =';
+    pushHistory(expr, text);
+    lastAns=v;
+    expr=text;
+    justEq=true;
+    showResult('= '+text, false);
+    render();
+  }catch(err){
+    showResult('エラー：'+(err&&err.message?err.message:'計算できませんでした'), true);
+  }
+}
+function doBackspace(){
+  if(!expr) return;
+  var tokens=['asin(','acos(','atan(','sin(','cos(','tan(','log(','ln(','√(','Ans'];
+  for(var i=0;i<tokens.length;i++){
+    if(expr.slice(-tokens[i].length)===tokens[i]){ expr=expr.slice(0,-tokens[i].length); justEq=false; render(); return; }
+  }
+  expr=expr.slice(0,-1);
+  justEq=false;
+  render();
+}
+function doNegate(){
+  if(!expr){ expr='−'; render(); return; }
+  try{
+    var v=evaluateDisplay();
+    expr=fmt(-v);
+    justEq=false;
+    showResult('符号を変えました', false);
+    render();
+  }catch(e){
+    if(expr.charAt(0)==='−'){ expr=expr.slice(1); } else { expr='−('+expr+')'; }
+    render();
+  }
+}
+function doTax(kind){
+  var base;
+  try{ base=expr?evaluateDisplay():lastAns; }catch(e){ showResult('エラー：先に正しい式を入力してください', true); return; }
+  var v, label;
+  if(kind==='in10'){ v=base*1.1; label='税込10%'; }
+  else if(kind==='in8'){ v=base*1.08; label='税込8%'; }
+  else if(kind==='out10'){ v=base/1.1; label='税抜10%'; }
+  else { v=base/1.08; label='税抜8%'; }
+  try{
+    var text=fmt(v);
+    prevEl.textContent=fmt(base)+' の'+label+' =';
+    pushHistory(fmt(base)+'（'+label+'）', text);
+    lastAns=v;
+    expr=text; justEq=true;
+    showResult(label+'： '+text, false);
+    render();
+  }catch(err){ showResult('エラー：'+err.message, true); }
+}
+var shell=document.getElementById('calcShell');
+shell.addEventListener('click', function(ev){
+  var btn=ev.target.closest('button');
+  if(!btn) return;
+  calcActive=true;
+  var ins=btn.getAttribute('data-ins');
+  var act=btn.getAttribute('data-act');
+  var tax=btn.getAttribute('data-tax');
+  if(ins!=null){ insertText(ins); return; }
+  if(tax){ doTax(tax); return; }
+  if(!act) return;
+  if(act==='ac'){ expr=''; justEq=false; prevEl.textContent=''; showResult('', false); render(); }
+  else if(act==='bs'){ doBackspace(); }
+  else if(act==='eq'){ doEquals(); }
+  else if(act==='neg'){ doNegate(); }
+  else if(act==='mc'){ memory=0; hasMem=false; render(); }
+  else if(act==='mr'){ if(hasMem){ insertText(fmt(memory)); } }
+  else if(act==='mplus'||act==='mminus'){
+    try{ var v=expr?evaluateDisplay():lastAns; memory=(act==='mplus')?memory+v:memory-v; hasMem=true; showResult('メモリーに'+(act==='mplus'?'加えました':'引きました')+'： M = '+fmt(memory), false); render(); }
+    catch(e){ showResult('エラー：メモリーに入れられませんでした', true); }
+  }
+});
+var sciToggle=document.getElementById('calcSciToggle');
+var sciPad=document.getElementById('calcSciPad');
+sciToggle.addEventListener('click', function(){
+  var hide=!sciPad.hidden;
+  sciPad.hidden=hide;
+  sciToggle.textContent=hide?'関数キーを表示':'関数キーを隠す';
+  sciToggle.classList.toggle('on', !hide);
+  sciToggle.setAttribute('aria-expanded', hide?'false':'true');
+});
+document.getElementById('calcAngleBtn').addEventListener('click', function(){
+  degMode=!degMode;
+  showResult(degMode?'DEG（度）で計算します':'RAD（弧度法）で計算します', false);
+  render();
+});
+document.getElementById('calcCopyBtn').addEventListener('click', function(){
+  var text;
+  try{ text=expr?fmt(evaluateDisplay()):''; }catch(e){ text=''; }
+  if(!text){ document.getElementById('calcCopyDone').textContent='コピーできる答えがありません。'; return; }
+  function done(){ document.getElementById('calcCopyDone').textContent='答え '+text+' をコピーしました。'; }
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+  } else { fallback(); }
+  function fallback(){
+    var ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); done(); }catch(e){}
+    document.body.removeChild(ta);
+  }
+});
+document.getElementById('calcHistClear').addEventListener('click', function(){
+  history=[]; renderHistory();
+});
+/* ---------- キーボード ---------- */
+document.addEventListener('pointerdown', function(ev){
+  calcActive=!!ev.target.closest('#calculator');
+});
+document.addEventListener('focusin', function(ev){
+  if(ev.target.closest&&ev.target.closest('#calculator')) calcActive=true;
+});
+document.addEventListener('keydown', function(ev){
+  if(!calcActive) return;
+  var t=ev.target;
+  if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT')) return;
+  var k=ev.key;
+  if(k==='Enter'||k==='='){ ev.preventDefault(); doEquals(); }
+  else if(k==='Escape'){ ev.preventDefault(); expr=''; justEq=false; showResult('', false); render(); }
+  else if(k==='Backspace'){ ev.preventDefault(); doBackspace(); }
+  else if(/^[0-9.]$/.test(k)){ insertText(k); }
+  else if(k==='+'){ insertText('+'); }
+  else if(k==='-'){ insertText('−'); }
+  else if(k==='*'){ insertText('×'); }
+  else if(k==='/'){ ev.preventDefault(); insertText('÷'); }
+  else if(k==='('||k===')'||k==='%'||k==='^'){ insertText(k); }
+});
+render();
+})();
+
+</script>
+<script>
+/* ===== 電卓ページのAmazonリンク（アソシエイトのリンク先URLを入れるとボタンが有効になります） ===== */
+var CALC_AMAZON_LINKS = { calculator: "", goods: "", book: ""};
+(function(){
+var pairs=[["calcAmzCalc",CALC_AMAZON_LINKS.calculator],["calcAmzGoods",CALC_AMAZON_LINKS.goods],["calcAmzBook",CALC_AMAZON_LINKS.book]];
+var any=false;
+pairs.forEach(function(p){
+var el=document.getElementById(p[0]); if(!el) return;
+var url=(p[1]||"").trim();
+if(url){ el.href=url; el.target="_blank"; el.rel="noopener sponsored"; el.classList.remove("is-disabled"); any=true;}
+else{ el.addEventListener("click", function(e){ e.preventDefault(); var st=document.getElementById("calcAmazonStatus"); if(st){ st.scrollIntoView({behavior:"smooth",block:"center"});}});}
+});
+var status=document.getElementById("calcAmazonStatus");
+if(status&&any){ status.textContent="リンク先はAmazonのページです。価格や在庫はリンク先で確認してください。";}
+})();
+</script>
+</body>
+</html>
